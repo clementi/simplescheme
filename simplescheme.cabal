@@ -1,0 +1,76 @@
+cabal-version: 1.12
+
+-- This file has been generated from package.yaml by hpack version 0.33.0.
+--
+-- see: https://github.com/sol/hpack
+--
+-- hash: c4ac22ca403a33e8647b2a1c70d62f26ae35d994b7f556aebd8b1aef05bf1aa0
+
+name:           simplescheme
+version:        0.1.0.0
+description:    Please see the README on GitHub at <https://github.com/githubuser/simplescheme#readme>
+homepage:       https://github.com/githubuser/simplescheme#readme
+bug-reports:    https://github.com/githubuser/simplescheme/issues
+author:         Author name here
+maintainer:     example@example.com
+copyright:      2020 Author name here
+license:        BSD3
+license-file:   LICENSE
+build-type:     Simple
+extra-source-files:
+    README.md
+    ChangeLog.md
+
+source-repository head
+  type: git
+  location: https://github.com/githubuser/simplescheme
+
+library
+  exposed-modules:
+      Lib
+      LispVal
+      Parser
+  other-modules:
+      Paths_simplescheme
+  hs-source-dirs:
+      src
+  build-depends:
+      base >=4.7 && <5
+    , containers
+    , mtl
+    , parsec
+    , text
+  default-language: Haskell2010
+
+executable simplescheme-exe
+  main-is: Main.hs
+  other-modules:
+      Paths_simplescheme
+  hs-source-dirs:
+      app
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      base >=4.7 && <5
+    , containers
+    , mtl
+    , parsec
+    , simplescheme
+    , text
+  default-language: Haskell2010
+
+test-suite simplescheme-test
+  type: exitcode-stdio-1.0
+  main-is: Spec.hs
+  other-modules:
+      Paths_simplescheme
+  hs-source-dirs:
+      test
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      base >=4.7 && <5
+    , containers
+    , mtl
+    , parsec
+    , simplescheme
+    , text
+  default-language: Haskell2010
