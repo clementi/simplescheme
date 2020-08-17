@@ -4,7 +4,7 @@ cabal-version: 1.12
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: c4ac22ca403a33e8647b2a1c70d62f26ae35d994b7f556aebd8b1aef05bf1aa0
+-- hash: 5e6dd5ecc8782228a53aba221fd503bdf9a26bdf0d9ec4c2d849c6bd6245c47f
 
 name:           simplescheme
 version:        0.1.0.0
@@ -27,7 +27,6 @@ source-repository head
 
 library
   exposed-modules:
-      Lib
       LispVal
       Parser
   other-modules:
